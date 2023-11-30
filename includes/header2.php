@@ -18,7 +18,7 @@
                             <a class="nav-link active" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Pets</a>
+                            <a class="nav-link active" href="../user/pets.php">Pets</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">About Us</a>
