@@ -105,6 +105,7 @@
                           </tr>
                         </tbody>
                       </table>
+                      <a href="./addressform.html" class="btn btn-primary">Register for Adoption</a>
                     </div>
                   </div>
 

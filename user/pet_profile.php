@@ -44,7 +44,7 @@
                   
                   <!-- Applied for Adopt Section -->
                   <div class="mb-4">
-                    <h4>Applied for Adopt</h4>
+                    <h4>Pet Details</h4>
                     <hr>
                     <div class="table-responsive">
                       <table class="table">
@@ -77,7 +77,7 @@
 
                   <!-- Registered for Adopt Section -->
                   <div class="mb-4">
-                    <h4>Registered for Adopt</h4>
+                    <h4>Other Pet things</h4>
                     <hr>
                     <div class="table-responsive">
                       <table class="table">
@@ -110,7 +110,7 @@
 
                   <!-- My Address Section -->
                   <div>
-                    <h4>My Address</h4>
+                    <h4>Adopt?</h4>
                     <hr>
                     <div class="table-responsive">
                       <table class="table">
@@ -130,7 +130,7 @@
                           </tr>
                         </tbody>
                       </table>
-                      <a href="./addressform.html" class="btn btn-primary">Create</a>
+                      <a href="./addressform.html" class="btn btn-primary">Apply for Adoption</a>
                     </div>
                   </div>
                 </div>
