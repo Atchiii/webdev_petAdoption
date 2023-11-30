@@ -17,12 +17,12 @@
 
             if($row['user_type'] == 'admin'){
 
-                $_SESSION['admin_name'] = $row['name'];
+                $_SESSION['admin_name'] = $row['fname'];
                 header('location:admin/dashboard.php');
 
             }elseif($row['user_type'] == 'user'){
 
-                $_SESSION['user_name'] = $row['name'];
+                $_SESSION['user_name'] = $row['fname'];
                 header('location:user/home_page.php');
             }
         }else{
@@ -57,7 +57,7 @@
             <input type="email" name="email" required placeholder="Email">
             <input type="password" name="password" required placeholder="Password">
             <input type="submit" name="submit" value="login now" class="form-btn">
-            <p>Don't have an account?<a href="signup.php">Sign up</a></p>
+            <p>Don't have an account? <a href="signup.php">Sign up</a></p>
         </form>
     </div>
     <?php @include 'includes/foot.php';?>

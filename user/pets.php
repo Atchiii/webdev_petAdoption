@@ -1,3 +1,12 @@
+<?php
+    @include '../db/config.php';
+
+    session_start();
+    
+    if(!isset($_SESSION['user_name'])){
+        header('location:../login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

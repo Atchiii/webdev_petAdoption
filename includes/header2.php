@@ -28,7 +28,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown me-1">
                                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    User Name
+                                    <?php echo $_SESSION['user_name'];?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <!-- Add additional dropdown items here -->

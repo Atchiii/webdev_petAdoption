@@ -3,11 +3,15 @@
     @include 'db/db.php';
 
     if(isset($_POST['submit'])){
-        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+        $mname = mysqli_real_escape_string($conn, $_POST['mname']);
+        $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+        $contact = mysqli_real_escape_string($conn, $_POST['contact']);
+        $address = mysqli_real_escape_string($conn, $_POST['address']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $pass = md5($_POST['password']);
         $cpass = md5($_POST['cpassword']);
-        $user_type = $_POST['user_type'];
+        $sex = $_POST['sex'];
 
         $select = "SELECT * FROM user_form WHERE email='$email' && password='$pass'";
 
@@ -19,7 +23,7 @@
             if($pass != $cpass){
                 $error[] = 'Password not matched';
             }else{
-                $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$name', '$email', '$pass', '$user_type')";
+                $insert = "INSERT INTO user_form(fname, mname, lname, contact, address, email, password, sex, user_type) VALUES('$fname','$mname','$lname','$contact','$address','$email', '$pass', '$sex', 'user')";
                 mysqli_query($conn, $insert);
                 header('location:login.php');
             }
@@ -50,16 +54,25 @@
                 }
             
             ?>
-            <input type="text" name="name" required placeholder="Enter your name here">
-            <input type="email" name="email" required placeholder="Enter your email here">
-            <input type="password" name="password" required placeholder="Enter your password here">
-            <input type="password" name="cpassword" required placeholder="Confirm your password here">
-            <select name="user_type" id="">
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
+            <div class="d-flex">
+                <input class="me-1" type="text" name="fname" required placeholder="First name">
+                <input class="me-1" type="text" name="mname" placeholder="M. I">
+                <input type="text" name="lname" required placeholder="Last name">
+            </div>
+            <input type="email" name="email" required placeholder="Email">
+            <input type="text" name="address" required placeholder="Address">
+            <input type="text" name="contact" required placeholder="Contact Number">
+            <div class="d-flex">
+                <input class="me-1" type="password" name="password" required placeholder="Password">
+                <input type="password" name="cpassword" required placeholder="Confirm password">
+            </div>
+            <select name="sex" id="">
+                <option value="">Sex</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
             </select>
             <input type="submit" name="submit" value="register now" class="form-btn">
-            <p>Already have an account?<a href="login.php"> Login here</a></p>
+            <p>Already have an account? <a href="login.php">Login</a></p>
         </form>
     </div>
     <?php @include 'includes/foot.php';?>
