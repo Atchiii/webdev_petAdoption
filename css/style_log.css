@@ -1,0 +1,74 @@
+
+
+.form-container-l{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: #eee;
+}
+
+.form-container-l form{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    background-color: #fff;
+    text-align: center;
+    width: 500px;
+}
+
+.form-container-l form h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-container-l form input,
+.form-container-l form select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 8px 0;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.form-container-l form select option{
+    background-color: #fff;
+}
+
+.form-container-l form .form-btn{
+    background-color: #fbd0d9;
+    color: crimson;
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-container-l form .form-btn:hover{
+    background-color: crimson;
+    color: #fff;
+}
+
+.form-container-l form p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.form-container-l form p a{
+    color: crimson;
+}
+
+.form-container-l form .error-msg{
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 15px;
+}
