@@ -1,3 +1,14 @@
+<?php
+
+    @include 'config.php';
+
+    session_start();
+    
+    if(!isset($_SESSION['user_name'])){
+        header('location:../login.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,9 +30,9 @@
           <div class="row">
 
             <!-- Profile Card -->
-            <div class="col-md-4 d-flex align-items-center flex-column card p-3" style="max-width: 90%; width: 320px; margin: auto;">
+            <div class="col-md-4 d-flex align-items-center flex-column card p-3" style="max-width: 90%; width: 320px; height: 400px;">
               <img class="mr-3 rounded-circle" src="https://picsum.photos/300/200?random=3" alt="Profile Image" style="width: 150px; height: 150px;">
-              <h3>John Doe</h3>
+              <h3><?php echo $_SESSION['user_name'];?></h3>
               <p class="lead">Art Enthusiast</p>
               <p>Description here</p>
             </div>
