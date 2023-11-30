@@ -57,7 +57,7 @@
             <input type="email" name="email" required placeholder="Email">
             <input type="password" name="password" required placeholder="Password">
             <input type="submit" name="submit" value="login now" class="form-btn">
-            <p>Don't have an account?<a href="signup.php"> Register here</a></p>
+            <p>Don't have an account?<a href="signup.php">Sign up</a></p>
         </form>
     </div>
     <?php @include 'includes/foot.php';?>
